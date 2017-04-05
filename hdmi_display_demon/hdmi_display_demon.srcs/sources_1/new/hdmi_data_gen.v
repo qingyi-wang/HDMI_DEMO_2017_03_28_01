@@ -56,14 +56,14 @@ parameter V_End			=	745;
 	*/
 	
 //红_绿_蓝
-parameter	BLACK   = 16'b00000_000000_00000;  
-parameter	BLUE    = 16'b00000_000000_11111;
-parameter	GREEN   = 16'b00000_111111_00000;
-parameter	DIAN	= 16'b00000_111111_11111;
-parameter	RED     = 16'b11111_000000_00000;
-parameter	PURPLE  = 16'b11111_000000_11111;
-parameter	YELLOW  = 16'b11111_111111_00000;
-parameter	WHITE   = 16'b11111_111111_11111;
+parameter	BLACK   = 24'b00000000_00000000_00000000;  
+parameter	BLUE    = 24'b00000000_00000000_11111111;
+parameter	GREEN   = 24'b00000000_11111111_00000000;
+parameter	DIAN	= 24'b00000000_11111111_11111111;
+parameter	RED     = 24'b11111111_00000000_00000000;
+parameter	PURPLE  = 24'b11111111_00000000_11111111;
+parameter	YELLOW  = 24'b11111111_11111111_00000000;
+parameter	WHITE   = 24'b11111111_11111111_11111111;
 	
 //---------------------------------//
 // 水平扫描参数的设定640*480  60HZ
@@ -102,12 +102,12 @@ begin
 	if(1'b0) 			   hsync_r <= 1'b1;
 	else if(x_cnt==1) 	   hsync_r <= 1'b0;
 	else if(x_cnt==H_Sync) hsync_r <= 1'b1;
-	else; 
+	else ; 
 	
 	if(1'b0)                hs_de <= 1'b0;
 	else if(x_cnt==H_Start) hs_de <= 1'b1;
 	else if(x_cnt==H_End)   hs_de <= 1'b0;
-	else;
+	else ;
 end
 
 reg[11:0]	y_cnt;
@@ -117,7 +117,7 @@ begin
 	if(1'b0) 				y_cnt <= 1; 
 	else if(y_cnt==V_Total) y_cnt <= 1;
 	else if(x_cnt==H_Total) y_cnt <= y_cnt + 1;
-	else;
+	else ;
 end
 
 reg	vsync_r;
@@ -127,38 +127,38 @@ begin
 	if(1'b0) 				vsync_r <= 1'b1;
 	else if(y_cnt==1)       vsync_r <= 1'b0;
 	else if(y_cnt==V_Sync)  vsync_r <= 1'b1;
-	else;
+	else ;
 	
 	if(1'b0)   				vs_de <= 1'b0;
 	else if(y_cnt==V_Start) vs_de <= 1'b1;
 	else if(y_cnt==V_End)   vs_de <= 1'b0;
-	else;
+	else ;
 end
 
 
-reg[16:0]	VGA_rgb;
+reg[24:0]	VGA_rgb;
 /*
 always @(posedge pix_clk)		//传输图像
 begin  
 	if(1'b0) 
 		begin 
-			VGA_rgb <= 16'b0; 	 
+			VGA_rgb <= 24'b0; 	 
 		end
    else
 		begin
-			VGA_rgb[4:0]   <= q_sig[4:0];
-			VGA_rgb[10:5]  <= q_sig[10:5];
-			VGA_rgb[15:11] <= q_sig[15:11];
+			VGA_rgb[7:0]   <= q_sig[7:0];
+			VGA_rgb[15:8]  <= q_sig[15:8];
+			VGA_rgb[23:16] <= q_sig[23:16];
 		end 	
 end
 */
 		
 // 测试图像
 always @ (posedge pix_clk)
- 
+ /*
 	if(1'b0)
         begin
-            VGA_rgb <= 16'b0;
+            VGA_rgb <= 24'b0;
         end 
     else
 	 begin				//显示彩条
@@ -171,12 +171,14 @@ always @ (posedge pix_clk)
 			else if(x_cnt < 10'd624) VGA_rgb = YELLOW;
 			else	                 VGA_rgb = WHITE;   
 	end
-/*
+*/
+
+///*
 		
 		begin
-			VGA_rgb <= 16'h00_ff_ff;                 //传输图像测试
+			VGA_rgb <= 24'h00_ff_ff;                 //传输图像测试
 		end
-*/
+//*/
 
 reg [14:0]address;
 // 内存地址进行选址
@@ -195,7 +197,7 @@ always @ (posedge pix_clk)
 
 // 存储图像的 IP
 wire    [14:0]  address_sig; 	// 地址和数据
-wire    [15:0]  q_sig;
+wire    [23:0]  q_sig;
 assign address_sig = address;
 
 // 这个是 RGB88 的模式，消耗的rom 资源很多， 7010 跑不动
@@ -217,11 +219,11 @@ image_rom u_image_rom
 
 assign VGA_HS	=	hsync_r;
 assign VGA_VS	=	vsync_r;
-assign VGA_DE	=	hs_de	&	vs_de;
+assign VGA_DE	=	hs_de & vs_de;
 
-assign VGA_R	=	VGA_DE?VGA_rgb[15:11]:5'h0;
-assign VGA_G	=	VGA_DE?VGA_rgb[10:5]:6'h0;
-assign VGA_B	=	VGA_DE?VGA_rgb[4:0]:5'h0;
+assign VGA_R	=	VGA_DE?VGA_rgb[7:0]  :5'h0;
+assign VGA_G	=	VGA_DE?VGA_rgb[15:8] :6'h0;
+assign VGA_B	=	VGA_DE?VGA_rgb[23:16]:5'h0;
 
 
 /*
