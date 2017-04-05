@@ -1,0 +1,386 @@
+
+*** Running vivado
+    with args -log vga_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_test.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source vga_test.tcl -notrace
+Command: synth_design -top vga_test -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21664 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 309.762 ; gain = 99.563
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_test' [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/design/vga_test.v:4]
+	Parameter BLACK bound to: 12'b000000000000 
+	Parameter BLUE bound to: 12'b000000001111 
+	Parameter GREEN bound to: 12'b000011110000 
+	Parameter DIAN bound to: 12'b000011111111 
+	Parameter RED bound to: 12'b111100000000 
+	Parameter PURPLE bound to: 12'b111100001111 
+	Parameter YELLOW bound to: 12'b111111110000 
+	Parameter WHITE bound to: 12'b111111111111 
+INFO: [Synth 8-638] synthesizing module 'vga_sync' [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/design/vga_sync.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/design/vga_sync.v:48]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/design/vga_sync.v:96]
+INFO: [Synth 8-256] done synthesizing module 'vga_sync' (1#1) [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/design/vga_sync.v:7]
+INFO: [Synth 8-638] synthesizing module 'rom_pic' [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/synth_1/.Xil/Vivado-18424-Dc_Wang/realtime/rom_pic_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'rom_pic' (2#1) [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/synth_1/.Xil/Vivado-18424-Dc_Wang/realtime/rom_pic_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/synth_1/.Xil/Vivado-18424-Dc_Wang/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (3#1) [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/synth_1/.Xil/Vivado-18424-Dc_Wang/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'vga_test' (4#1) [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/design/vga_test.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 347.055 ; gain = 136.855
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 347.055 ; gain = 136.855
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'clk_wiz_0_inst' [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/design/vga_test.v:119]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'rom_pic' instantiated as 'rom_pic_inst' [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/design/vga_test.v:113]
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/synth_1/.Xil/Vivado-18424-Dc_Wang/dcp/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_inst'
+Finished Parsing XDC File [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/synth_1/.Xil/Vivado-18424-Dc_Wang/dcp/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_0_inst'
+Parsing XDC File [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc]
+CRITICAL WARNING: [Common 17-161] Invalid option value '#------------------------------------------------------------------------------------------------' specified for 'objects'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'gpio_0_tri_io[0]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'gpio_0_tri_io[0]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'gpio_0_tri_io[1]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'gpio_0_tri_io[1]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'gpio_0_tri_io[1]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'gpio_0_tri_io[0]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'cmos_xclk_o'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'cmos_pclk_i'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:24]
+WARNING: [Vivado 12-507] No nets matched 'cmos_pclk_i_IBUF'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'cmos_vsync_i'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'cmos_href_i'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'cmos_data_i[0]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'cmos_data_i[1]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'cmos_data_i[2]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'cmos_data_i[3]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'cmos_data_i[4]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'cmos_data_i[5]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'cmos_data_i[6]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'cmos_data_i[7]'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CLK_P'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D0_P'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D1_P'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D2_P'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_CLK_P'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D0_P'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D1_P'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_D2_P'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_HPD'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_HPD'. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:51]
+CRITICAL WARNING: [Designutils 20-1307] Command '[get_ports {hsync}]' is not supported in the xdc constraint file. [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc:57]
+Finished Parsing XDC File [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/vga_test_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/constrs_1/new/vga.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/vga_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 677.223 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 677.223 ; gain = 467.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 677.223 ; gain = 467.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/synth_1/.Xil/Vivado-18424-Dc_Wang/dcp/clk_wiz_0_in_context.xdc, line 3).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 677.223 ; gain = 467.023
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "h_video_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "line_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "v_video_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "led" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 677.223 ; gain = 467.023
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               19 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module vga_test 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               19 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module vga_sync 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "vga_syn_inst/line_cnt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_syn_inst/v_video_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_syn_inst/h_video_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_syn_inst/hsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_syn_inst/vsync" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "led" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP address_sig0, operation Mode is: C+(A:0x280)*B.
+DSP Report: operator address_sig0 is absorbed into DSP address_sig0.
+DSP Report: operator address_sig1 is absorbed into DSP address_sig0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 677.223 ; gain = 467.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|vga_test    | C+(A:0x280)*B | 10     | 10     | 10     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz_0_inst/clk_out1' to pin 'clk_wiz_0_inst/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 677.223 ; gain = 467.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 677.223 ; gain = 467.023
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/design/vga_test.v:86]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/design/vga_sync.v:73]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/design/vga_sync.v:28]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 691.609 ; gain = 481.410
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 691.609 ; gain = 481.410
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 691.609 ; gain = 481.410
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 691.609 ; gain = 481.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 691.609 ; gain = 481.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 691.609 ; gain = 481.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 691.609 ; gain = 481.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |rom_pic       |         1|
+|2     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_0 |     1|
+|2     |rom_pic   |     1|
+|3     |CARRY4    |     6|
+|4     |DSP48E1   |     1|
+|5     |LUT1      |    25|
+|6     |LUT2      |    22|
+|7     |LUT3      |    42|
+|8     |LUT4      |    11|
+|9     |LUT5      |     8|
+|10    |LUT6      |    18|
+|11    |FDCE      |    58|
+|12    |FDPE      |     4|
+|13    |IBUF      |     1|
+|14    |OBUF      |    15|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------------+---------+------+
+|      |Instance       |Module   |Cells |
++------+---------------+---------+------+
+|1     |top            |         |   224|
+|2     |  vga_syn_inst |vga_sync |    76|
++------+---------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 691.609 ; gain = 481.410
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 691.609 ; gain = 124.469
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 691.609 ; gain = 481.410
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 32 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 691.609 ; gain = 459.590
+INFO: [Common 17-1381] The checkpoint 'E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/synth_1/vga_test.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 691.609 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 30 16:59:38 2017...

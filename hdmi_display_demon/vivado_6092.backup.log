@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Feb 23 10:16:49 2017
+# Process ID: 6092
+# Current directory: F:/miz701N/7010/s1/S01_CH13_hdmi_display_demon/hdmi_display_demon
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2904 F:\miz701N\7010\s1\S01_CH13_hdmi_display_demon\hdmi_display_demon\hdmi_display_demon.xpr
+# Log file: F:/miz701N/7010/s1/S01_CH13_hdmi_display_demon/hdmi_display_demon/vivado.log
+# Journal file: F:/miz701N/7010/s1/S01_CH13_hdmi_display_demon/hdmi_display_demon\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/miz701N/7010/s1/S01_CH13_hdmi_display_demon/hdmi_display_demon/hdmi_display_demon.xpr
+INFO: [Project 1-313] Project file moved from 'F:/miz701N/hdmi/hdmi_display_demon' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/miz701N/7010/s1/S01_CH13_hdmi_display_demon/HDMI_FPGA_ML'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2015.4/data/ip'.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Feb 23 11:01:18 2017] Launched impl_1...
+Run output will be captured here: F:/miz701N/7010/s1/S01_CH13_hdmi_display_demon/hdmi_display_demon/hdmi_display_demon.runs/impl_1/runme.log
+open_hw
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.4
+  **** Build date : Nov 17 2015-18:01:07
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210249854807
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Feb 23 11:04:29 2017] Launched impl_1...
+Run output will be captured here: F:/miz701N/7010/s1/S01_CH13_hdmi_display_demon/hdmi_display_demon/hdmi_display_demon.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 23 11:06:02 2017...

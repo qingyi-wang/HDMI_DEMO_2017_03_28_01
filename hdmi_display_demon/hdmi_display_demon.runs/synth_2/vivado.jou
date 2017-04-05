@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Wed Apr 05 11:06:30 2017
+# Process ID: 11676
+# Current directory: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.runs/synth_2
+# Command line: vivado.exe -log HDMI_display_Demon.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDMI_display_Demon.tcl
+# Log file: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.runs/synth_2/HDMI_display_Demon.vds
+# Journal file: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source HDMI_display_Demon.tcl -notrace

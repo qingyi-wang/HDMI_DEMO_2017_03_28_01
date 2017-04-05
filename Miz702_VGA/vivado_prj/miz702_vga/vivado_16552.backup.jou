@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Mar 30 16:54:52 2017
+# Process ID: 16552
+# Current directory: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19468 E:\FPGA\vivado\HDMI_DEMO_2017_03_28_01\Miz702_VGA\vivado_prj\miz702_vga\miz702_vga.xpr
+# Log file: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/vivado.log
+# Journal file: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.xpr
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.3 -module_name rom_pic_1x307200 -dir e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/sources_1/ip
+set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {32406} CONFIG.Enable_A {Always_Enabled} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Load_Init_File {true} CONFIG.Coe_File {E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/test/test.coe} CONFIG.Read_Width_A {12} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Port_A_Write_Rate {0}] [get_ips rom_pic_1x307200]
+generate_target {instantiation_template} [get_files e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/sources_1/ip/rom_pic_1x307200/rom_pic_1x307200.xci]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+synth_design -rtl -name rtl_1

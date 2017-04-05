@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Mon Nov 16 20:15:58 2015
+# Process ID: 13652
+# Log file: F:/Miz702/Miz702_code/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
+# Journal file: F:/Miz702/Miz702_code/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/clk_wiz_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source clk_wiz_0.tcl -notrace

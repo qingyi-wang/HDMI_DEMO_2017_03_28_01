@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="clk_wiz_0_synth_1" LaunchDir="E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.runs/clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="HDMI_FPGA_ML_0_synth_1" LaunchDir="E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.runs/HDMI_FPGA_ML_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_2" LaunchDir="E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.runs/synth_2" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="clk_wiz_0_synth_1"/>
+		<Parent Id="HDMI_FPGA_ML_0_synth_1"/>
+	</Run>
+	<Run Id="impl_3" LaunchDir="E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.runs/impl_3" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_2"/>
+		<Parent Id="clk_wiz_0_synth_1"/>
+		<Parent Id="HDMI_FPGA_ML_0_synth_1"/>
+	</Run>
+</Runs>
+

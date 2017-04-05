@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Nov 17 14:26:19 2015
+# Process ID: 12876
+# Log file: F:/Miz702/Miz702_code/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/rom_pic_synth_1/rom_pic.vds
+# Journal file: F:/Miz702/Miz702_code/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.runs/rom_pic_synth_1\vivado.jou
+#-----------------------------------------------------------
+source rom_pic.tcl -notrace

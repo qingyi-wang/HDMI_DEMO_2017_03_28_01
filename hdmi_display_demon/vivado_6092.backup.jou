@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Feb 23 10:16:49 2017
+# Process ID: 6092
+# Current directory: F:/miz701N/7010/s1/S01_CH13_hdmi_display_demon/hdmi_display_demon
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2904 F:\miz701N\7010\s1\S01_CH13_hdmi_display_demon\hdmi_display_demon\hdmi_display_demon.xpr
+# Log file: F:/miz701N/7010/s1/S01_CH13_hdmi_display_demon/hdmi_display_demon/vivado.log
+# Journal file: F:/miz701N/7010/s1/S01_CH13_hdmi_display_demon/hdmi_display_demon\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/miz701N/7010/s1/S01_CH13_hdmi_display_demon/hdmi_display_demon/hdmi_display_demon.xpr
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+reset_run impl_1 -prev_step 
+reset_run impl_1 -prev_step 
+connect_hw_server
+open_hw_target
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1

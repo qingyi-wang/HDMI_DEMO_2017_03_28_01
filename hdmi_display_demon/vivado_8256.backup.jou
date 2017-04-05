@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Sat Jan 14 11:55:24 2017
+# Process ID: 8256
+# Current directory: F:/miz701N/hdmi/hdmi_display_demon
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7764 F:\miz701N\hdmi\hdmi_display_demon\hdmi_display_demon.xpr
+# Log file: F:/miz701N/hdmi/hdmi_display_demon/vivado.log
+# Journal file: F:/miz701N/hdmi/hdmi_display_demon\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/miz701N/hdmi/hdmi_display_demon/hdmi_display_demon.xpr
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {F:/miz701N/hdmi/hdmi_display_demon/hdmi_display_demon.runs/impl_1/HDMI_display_Demon.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {F:/miz701N/hdmi/hdmi_display_demon/hdmi_display_demon.runs/impl_1/HDMI_display_Demon.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]

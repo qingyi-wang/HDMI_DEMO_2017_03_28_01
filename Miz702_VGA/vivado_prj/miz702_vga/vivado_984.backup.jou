@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Wed Mar 29 20:58:31 2017
+# Process ID: 984
+# Current directory: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9160 E:\FPGA\vivado\HDMI_DEMO_2017_03_28_01\Miz702_VGA\vivado_prj\miz702_vga\miz702_vga.xpr
+# Log file: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/vivado.log
+# Journal file: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.xpr
+synth_design -rtl -name rtl_1
+create_bd_design "test"
+open_bd_design {E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/sources_1/bd/test/test.bd}
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.3 blk_mem_gen_0
