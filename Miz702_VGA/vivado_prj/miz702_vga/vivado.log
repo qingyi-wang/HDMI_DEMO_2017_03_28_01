@@ -2,10 +2,10 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Fri Mar 31 16:07:41 2017
-# Process ID: 8632
+# Start of session at: Thu Apr 06 20:09:25 2017
+# Process ID: 8348
 # Current directory: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9344 E:\FPGA\vivado\HDMI_DEMO_2017_03_28_01\Miz702_VGA\vivado_prj\miz702_vga\miz702_vga.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3004 E:\FPGA\vivado\HDMI_DEMO_2017_03_28_01\Miz702_VGA\vivado_prj\miz702_vga\miz702_vga.xpr
 # Log file: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/vivado.log
 # Journal file: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga\vivado.jou
 #-----------------------------------------------------------
@@ -22,5 +22,133 @@ Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command
 WARNING: [IP_Flow 19-2162] IP 'rom_pic' is locked:
 * IP definition 'Block Memory Generator (8.2)' for IP 'rom_pic' (customized with software release 2015.2) has a newer minor version in the IP Catalog.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+close_project
+open_project E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/HDMI_FPGA_ML'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/S01_CH10_VGA_Display_Demon/VGA_Display_Demon/VGA_Display_Demon.srcs/sources_1/ip/clk_wiz_0'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/HDMI_FPGA_ML'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz_ip_lib/HDMI_FPGA_ML'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/sources_1/ip/rom_pic'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/S01_CH10_VGA_Display_Demon/VGA_Display_Demon/VGA_Display_Demon.srcs/sources_1/ip/clk_wiz_0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2016.4/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'rom_pic' is locked:
+* IP definition 'Block Memory Generator (8.2)' for IP 'rom_pic' (customized with software release 2015.2) has a newer minor version in the IP Catalog.
+* Current project part 'xc7z010clg400-1' and the part 'xc7z020clg484-1' used to customize the IP 'rom_pic' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* IP definition 'Clocking Wizard (5.2)' for IP 'clk_wiz_0' (customized with software release 2015.4) has a newer minor version in the IP Catalog.
+* The IP Data in the repository is incompatible with the current instance (despite having identical Version and Revision). You will need to upgrade the IP before viewing the customization and generating outputs.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+reset_run synth_2
+launch_runs impl_3 -to_step write_bitstream -jobs 8
+[Thu Apr 06 20:22:24 2017] Launched synth_2...
+Run output will be captured here: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.runs/synth_2/runme.log
+[Thu Apr 06 20:22:24 2017] Launched impl_3...
+Run output will be captured here: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.runs/impl_3/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+WARNING: [Vivado_Tcl 4-393] The 'Implementation' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+
+WARNING: [IP_Flow 19-2162] IP 'rom_pic' is locked:
+* IP definition 'Block Memory Generator (8.2)' for IP 'rom_pic' (customized with software release 2015.2) has a newer minor version in the IP Catalog.
+* Current project part 'xc7z010clg400-1' and the part 'xc7z020clg484-1' used to customize the IP 'rom_pic' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+Top: HDMI_display_Demon
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:58 ; elapsed = 00:16:10 . Memory (MB): peak = 1001.273 ; gain = 790.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'HDMI_display_Demon' [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/new/HDMI_display_Demon.v:23]
+INFO: [Synth 8-638] synthesizing module 'hdmi_data_gen' [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/new/hdmi_data_gen.v:23]
+	Parameter H_Total bound to: 1650 - type: integer 
+	Parameter H_Sync bound to: 40 - type: integer 
+	Parameter H_Back bound to: 220 - type: integer 
+	Parameter H_Active bound to: 1280 - type: integer 
+	Parameter H_Front bound to: 110 - type: integer 
+	Parameter H_Start bound to: 260 - type: integer 
+	Parameter H_End bound to: 1540 - type: integer 
+	Parameter V_Total bound to: 750 - type: integer 
+	Parameter V_Sync bound to: 5 - type: integer 
+	Parameter V_Back bound to: 20 - type: integer 
+	Parameter V_Active bound to: 720 - type: integer 
+	Parameter V_Front bound to: 5 - type: integer 
+	Parameter V_Start bound to: 25 - type: integer 
+	Parameter V_End bound to: 745 - type: integer 
+	Parameter BLACK bound to: 24'b000000000000000000000000 
+	Parameter BLUE bound to: 24'b000000000000000011111111 
+	Parameter GREEN bound to: 24'b000000001111111100000000 
+	Parameter DIAN bound to: 24'b000000001111111111111111 
+	Parameter RED bound to: 24'b111111110000000000000000 
+	Parameter PURPLE bound to: 24'b111111110000000011111111 
+	Parameter YELLOW bound to: 24'b111111111111111100000000 
+	Parameter WHITE bound to: 24'b111111111111111111111111 
+INFO: [Synth 8-638] synthesizing module 'image_rom' [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/.Xil/Vivado-8348-Dc_Wang/realtime/image_rom_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'image_rom' (1#1) [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/.Xil/Vivado-8348-Dc_Wang/realtime/image_rom_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'hdmi_data_gen' (2#1) [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/new/hdmi_data_gen.v:23]
+INFO: [Synth 8-638] synthesizing module 'HDMI_FPGA_ML_0' [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/.Xil/Vivado-8348-Dc_Wang/realtime/HDMI_FPGA_ML_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'HDMI_FPGA_ML_0' (3#1) [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/.Xil/Vivado-8348-Dc_Wang/realtime/HDMI_FPGA_ML_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/.Xil/Vivado-8348-Dc_Wang/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (4#1) [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/.Xil/Vivado-8348-Dc_Wang/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'HDMI_display_Demon' (5#1) [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/new/HDMI_display_Demon.v:23]
+WARNING: [Synth 8-3917] design HDMI_display_Demon has port LED[1] driven by constant 1
+WARNING: [Synth 8-3917] design HDMI_display_Demon has port LED[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:59 ; elapsed = 00:16:11 . Memory (MB): peak = 1015.223 ; gain = 804.781
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:59 ; elapsed = 00:16:11 . Memory (MB): peak = 1015.223 ; gain = 804.781
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/HDMI_FPGA_ML_0/HDMI_FPGA_ML_0.dcp' for cell 'u_HDMI'
+INFO: [Project 1-454] Reading design checkpoint 'e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'u_clk'
+INFO: [Project 1-454] Reading design checkpoint 'e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/image_rom/image_rom.dcp' for cell 'u_hdmi_data_gen/u_image_rom'
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.4
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 2 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk/inst'
+Finished Parsing XDC File [e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk/inst'
+Parsing XDC File [e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk/inst'
+Finished Parsing XDC File [e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_display_Demon_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_display_Demon_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/constrs_1/new/zynq_pin.xdc]
+Finished Parsing XDC File [E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/constrs_1/new/zynq_pin.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  OBUFDS => OBUFDS: 4 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:01:12 ; elapsed = 00:16:19 . Memory (MB): peak = 1327.109 ; gain = 1116.668
+23 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1327.109 ; gain = 350.273
+reset_run synth_2
+launch_runs impl_3 -to_step write_bitstream -jobs 8
+[Thu Apr 06 20:28:06 2017] Launched synth_2...
+Run output will be captured here: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.runs/synth_2/runme.log
+[Thu Apr 06 20:28:06 2017] Launched impl_3...
+Run output will be captured here: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.runs/impl_3/runme.log
 exit
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 31 17:44:40 2017...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 06 20:48:05 2017...

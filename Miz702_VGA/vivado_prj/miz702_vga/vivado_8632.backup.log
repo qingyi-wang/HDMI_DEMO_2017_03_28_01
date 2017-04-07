@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Mar 31 16:07:41 2017
+# Process ID: 8632
+# Current directory: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9344 E:\FPGA\vivado\HDMI_DEMO_2017_03_28_01\Miz702_VGA\vivado_prj\miz702_vga\miz702_vga.xpr
+# Log file: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/vivado.log
+# Journal file: E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2016.4/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* IP definition 'Clocking Wizard (5.1)' for IP 'clk_wiz_0' (customized with software release 2015.2) has a newer minor version in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'rom_pic' is locked:
+* IP definition 'Block Memory Generator (8.2)' for IP 'rom_pic' (customized with software release 2015.2) has a newer minor version in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 31 17:44:40 2017...

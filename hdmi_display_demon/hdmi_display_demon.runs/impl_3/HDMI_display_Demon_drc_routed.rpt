@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date         : Wed Apr 05 11:07:50 2017
+| Date         : Fri Apr 07 20:06:10 2017
 | Host         : Dc_Wang running 64-bit major release  (build 9200)
 | Command      : report_drc -file HDMI_display_Demon_drc_routed.rpt -pb HDMI_display_Demon_drc_routed.pb -rpx HDMI_display_Demon_drc_routed.rpx
 | Design       : HDMI_display_Demon
@@ -24,15 +24,26 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 1
+             Violations found: 3
 +--------+----------+--------------------+------------+
 | Rule   | Severity | Description        | Violations |
 +--------+----------+--------------------+------------+
+| DPIP-1 | Warning  | Input pipelining   | 2          |
 | ZPS7-1 | Warning  | PS7 block required | 1          |
 +--------+----------+--------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP u_hdmi_data_gen/addr1 input u_hdmi_data_gen/addr1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP u_hdmi_data_gen/addr_reg input u_hdmi_data_gen/addr_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
 ZPS7-1#1 Warning
 PS7 block required  
 The PS7 cell must be used in this Zynq design in order to enable correct default configuration.

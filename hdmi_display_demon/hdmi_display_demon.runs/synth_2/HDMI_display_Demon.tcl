@@ -25,6 +25,9 @@ set_property ip_cache_permissions disable [current_project]
 add_files E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/sources_1/ip/rom_pic/paris.coe
 add_files E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/test/test.coe
 add_files E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/test/lenna.coe
+add_files E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/test/lenna_320_240.coe
+add_files E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/test/CrazyBird.coe
+add_files E:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/test/helloworld.coe
 add_files -quiet e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp
 set_property used_in_implementation false [get_files e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp]
 add_files -quiet e:/FPGA/vivado/HDMI_DEMO_2017_03_28_01/hdmi_display_demon/hdmi_display_demon.srcs/sources_1/ip/HDMI_FPGA_ML_0/HDMI_FPGA_ML_0.dcp

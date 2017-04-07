@@ -37,13 +37,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="6"/>
-    <Option Name="WTModelSimExportSim" Val="6"/>
-    <Option Name="WTQuestaExportSim" Val="6"/>
-    <Option Name="WTIesExportSim" Val="6"/>
-    <Option Name="WTVcsExportSim" Val="6"/>
-    <Option Name="WTRivieraExportSim" Val="6"/>
-    <Option Name="WTActivehdlExportSim" Val="6"/>
+    <Option Name="WTXSimExportSim" Val="12"/>
+    <Option Name="WTModelSimExportSim" Val="12"/>
+    <Option Name="WTQuestaExportSim" Val="12"/>
+    <Option Name="WTIesExportSim" Val="12"/>
+    <Option Name="WTVcsExportSim" Val="12"/>
+    <Option Name="WTRivieraExportSim" Val="12"/>
+    <Option Name="WTActivehdlExportSim" Val="12"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -74,22 +74,22 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic.xml"/>
         <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="paris.coe"/>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic.veo"/>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="blk_mem_gen_v8_2/simulation/blk_mem_gen_v8_2.v"/>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic.mif"/>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="summary.log"/>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="synth/rom_pic.vhd"/>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic.xml"/>
         <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="sim/rom_pic.v"/>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic_funcsim.v"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic.mif"/>
         <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic_stub.v"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="sim/rom_pic.v"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic_funcsim.vhdl"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic_funcsim.v"/>
         <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="doc/blk_mem_gen_v8_2_changelog.txt"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic.veo"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="rom_pic_stub.v"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="blk_mem_gen_v8_2/simulation/blk_mem_gen_v8_2.v"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="summary.log"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd"/>
+        <CompFileExtendedInfo CompFileName="rom_pic.xci" FileRelPathName="synth/rom_pic.vhd"/>
       </File>
       <File Path="$PPRDIR/../Miz702_VGA/vivado_prj/miz702_vga/miz702_vga.srcs/sources_1/ip/rom_pic/paris.coe">
         <FileInfo>
@@ -104,6 +104,24 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../test/lenna.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../test/lenna_320_240.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../test/CrazyBird.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../test/helloworld.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>

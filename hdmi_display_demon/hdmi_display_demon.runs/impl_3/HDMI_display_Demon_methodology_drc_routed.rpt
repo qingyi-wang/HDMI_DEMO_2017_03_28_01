@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date         : Wed Apr 05 11:07:51 2017
+| Date         : Fri Apr 07 20:06:11 2017
 | Host         : Dc_Wang running 64-bit major release  (build 9200)
 | Command      : report_methodology -file HDMI_display_Demon_methodology_drc_routed.rpt -rpx HDMI_display_Demon_methodology_drc_routed.rpx
 | Design       : HDMI_display_Demon
@@ -23,15 +23,27 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 8
+             Violations found: 10
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
+| SYNTH-12  | Warning  | DSP input not registered      | 1          |
+| SYNTH-13  | Warning  | combinational multiplier      | 1          |
 | TIMING-18 | Warning  | Missing input or output delay | 8          |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+SYNTH-12#1 Warning
+DSP input not registered  
+DSP instance u_hdmi_data_gen/addr_reg is not fully pipelined on the input side. AREG/BREG/CREG/DREG are not used.
+Related violations: <none>
+
+SYNTH-13#1 Warning
+combinational multiplier  
+Detected combinational multiplier in DSP instance u_hdmi_data_gen/addr1.
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An output delay is missing on HDMI_CLK_N relative to clock(s) VIRTUAL_clk_out2_clk_wiz_0 
